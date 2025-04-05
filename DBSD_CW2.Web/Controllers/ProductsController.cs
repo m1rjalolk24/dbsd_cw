@@ -91,10 +91,8 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FirstName,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("Name,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
         {
-            if (ModelState.IsValid)
-            {
                 if (imageFile != null && imageFile.Length > 0)
                 {
                     using (var stream = new MemoryStream())
@@ -115,7 +113,7 @@ namespace DBSD_CW2.Web.Controllers
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewData["Categories"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }

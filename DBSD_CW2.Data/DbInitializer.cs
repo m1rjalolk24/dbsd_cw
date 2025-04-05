@@ -50,7 +50,7 @@ namespace DBSD_CW2.Data
             {
                 new Product
                 {
-                    FirstName = "Laptop",
+                    Name = "Laptop",
                     Description = "High-performance laptop with latest specifications",
                     Price = 999.99m,
                     StockQuantity = 50,
@@ -61,7 +61,7 @@ namespace DBSD_CW2.Data
                 },
                 new Product
                 {
-                    FirstName = "Smartphone",
+                    Name = "Smartphone",
                     Description = "Latest model smartphone with advanced features",
                     Price = 699.99m,
                     StockQuantity = 100,
@@ -72,7 +72,7 @@ namespace DBSD_CW2.Data
                 },
                 new Product
                 {
-                    FirstName = "Programming Guide",
+                    Name = "Programming Guide",
                     Description = "Comprehensive programming guide for beginners",
                     Price = 49.99m,
                     StockQuantity = 75,
@@ -83,7 +83,7 @@ namespace DBSD_CW2.Data
                 },
                 new Product
                 {
-                    FirstName = "Novel",
+                    Name = "Novel",
                     Description = "Bestselling fiction novel",
                     Price = 24.99m,
                     StockQuantity = 200,
@@ -94,7 +94,7 @@ namespace DBSD_CW2.Data
                 },
                 new Product
                 {
-                    FirstName = "T-Shirt",
+                    Name = "T-Shirt",
                     Description = "Cotton t-shirt with modern design",
                     Price = 19.99m,
                     StockQuantity = 150,
@@ -105,7 +105,7 @@ namespace DBSD_CW2.Data
                 },
                 new Product
                 {
-                    FirstName = "Jeans",
+                    Name = "Jeans",
                     Description = "Classic denim jeans",
                     Price = 59.99m,
                     StockQuantity = 100,

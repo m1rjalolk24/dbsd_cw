@@ -1,38 +1,38 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DBSD_CW2.Data.Models
 {
     public class Product
     {
-        [Key]
         public int ProductId { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string FirstName { get; set; }
+        public string Name { get; set; }
 
-        [Required]
         public string Description { get; set; }
 
-        [Column(TypeName = "decimal(10,2)")]
+        [Required]
         public decimal Price { get; set; }
 
+        [Required]
         public int StockQuantity { get; set; }
 
-        [Required]
         public byte[] ImageData { get; set; }
 
+        [Required]
         public DateTime CreatedDate { get; set; }
 
+        [Required]
         public bool IsActive { get; set; }
 
         public int? CategoryId { get; set; }
 
+        [Required]
         public DateTime LastModifiedDate { get; set; }
 
-        [ForeignKey("CategoryId")]
+        // Navigation property
         public virtual Category Category { get; set; }
     }
 } 
