@@ -52,6 +52,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Laptop",
                     LastName = "Pro",
+                    Phone = "+1 (555) 123-4567",
+                    Email = "laptop.pro@example.com",
+                    DateOfBirth = new DateTime(2023, 1, 15),
                     Description = "High-performance laptop with latest specifications",
                     Price = 999.99m,
                     StockQuantity = 50,
@@ -64,6 +67,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Smartphone",
                     LastName = "X",
+                    Phone = "+1 (555) 234-5678",
+                    Email = "smartphone.x@example.com",
+                    DateOfBirth = new DateTime(2022, 6, 10),
                     Description = "Latest model smartphone with advanced features",
                     Price = 699.99m,
                     StockQuantity = 100,
@@ -76,6 +82,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Programming",
                     LastName = "Guide",
+                    Phone = "+1 (555) 345-6789",
+                    Email = "programming.guide@example.com",
+                    DateOfBirth = new DateTime(2021, 3, 22),
                     Description = "Comprehensive programming guide for beginners",
                     Price = 49.99m,
                     StockQuantity = 75,
@@ -88,6 +97,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Fantasy",
                     LastName = "Novel",
+                    Phone = "+1 (555) 456-7890",
+                    Email = "fantasy.novel@example.com",
+                    DateOfBirth = new DateTime(2020, 9, 5),
                     Description = "Bestselling fiction novel",
                     Price = 24.99m,
                     StockQuantity = 200,
@@ -100,6 +112,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Cotton",
                     LastName = "T-Shirt",
+                    Phone = "+1 (555) 567-8901",
+                    Email = "cotton.tshirt@example.com",
+                    DateOfBirth = new DateTime(2023, 4, 18),
                     Description = "Cotton t-shirt with modern design",
                     Price = 19.99m,
                     StockQuantity = 150,
@@ -112,6 +127,9 @@ namespace DBSD_CW2.Data
                 {
                     FirstName = "Denim",
                     LastName = "Jeans",
+                    Phone = "+1 (555) 678-9012",
+                    Email = "denim.jeans@example.com",
+                    DateOfBirth = new DateTime(2022, 11, 30),
                     Description = "Classic denim jeans",
                     Price = 59.99m,
                     StockQuantity = 100,

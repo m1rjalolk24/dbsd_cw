@@ -15,6 +15,18 @@ namespace DBSD_CW2.Data.Models
         [StringLength(100)]
         public string LastName { get; set; }
 
+        [Phone]
+        [StringLength(20)]
+        public string Phone { get; set; }
+        
+        [EmailAddress]
+        [StringLength(100)]
+        public string Email { get; set; }
+        
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth")]
+        public DateTime? DateOfBirth { get; set; }
+
         public string Description { get; set; }
 
         [Required]

@@ -44,6 +44,8 @@ namespace DBSD_CW2.Web.Controllers
             {
                 products = products.Where(p => p.FirstName.Contains(searchString)
                                        || p.LastName.Contains(searchString)
+                                       || p.Phone.Contains(searchString)
+                                       || p.Email.Contains(searchString)
                                        || p.Description.Contains(searchString)
                                        || p.Category.Name.Contains(searchString));
             }
@@ -92,7 +94,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FirstName,LastName,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("FirstName,LastName,Phone,Email,DateOfBirth,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
         {
                 if (imageFile != null && imageFile.Length > 0)
                 {
@@ -140,7 +142,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,FirstName,LastName,Description,Price,StockQuantity,CategoryId,IsActive")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,FirstName,LastName,Phone,Email,DateOfBirth,Description,Price,StockQuantity,CategoryId,IsActive")] Product product, IFormFile imageFile)
         {
             if (id != product.ProductId)
             {
@@ -166,6 +168,9 @@ namespace DBSD_CW2.Web.Controllers
 
                     existingProduct.FirstName = product.FirstName;
                     existingProduct.LastName = product.LastName;
+                    existingProduct.Phone = product.Phone;
+                    existingProduct.Email = product.Email;
+                    existingProduct.DateOfBirth = product.DateOfBirth;
                     existingProduct.Description = product.Description;
                     existingProduct.Price = product.Price;
                     existingProduct.StockQuantity = product.StockQuantity;
