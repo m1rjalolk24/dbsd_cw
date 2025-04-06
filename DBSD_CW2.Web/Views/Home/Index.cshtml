@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mt-4">Welcome to Buka Fit management system</h1>
+            <p class="lead">This is a clients management system with CRUD operations and data filtering.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-box me-1"></i>
+                    Clients
+                </div>
+                <div class="card-body">
+                    <p>Manage your clients records.</p>
+                    <a asp-controller="Products" asp-action="Index" class="btn btn-primary">View Table</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-tags me-1"></i>
+                    Membership Tarrifs
+                </div>
+                <div class="card-body">
+                    <p>Organize your membership tarrifs into categories for better management.</p>
+                    <a asp-controller="Categories" asp-action="Index" class="btn btn-primary">View Tarrifs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
