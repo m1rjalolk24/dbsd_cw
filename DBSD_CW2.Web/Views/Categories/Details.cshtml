@@ -49,7 +49,7 @@
                                     <tr>
                                         <td>
                                             <a asp-controller="Products" asp-action="Details" asp-route-id="@product.ProductId">
-                                                @product.Name
+                                                @product.FirstName @product.LastName
                                             </a>
                                         </td>
                                         <td>@Html.DisplayFor(modelItem => product.Price)</td>

@@ -42,19 +42,20 @@ namespace DBSD_CW2.Web.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                products = products.Where(p => p.Name.Contains(searchString)
+                products = products.Where(p => p.FirstName.Contains(searchString)
+                                       || p.LastName.Contains(searchString)
                                        || p.Description.Contains(searchString)
                                        || p.Category.Name.Contains(searchString));
             }
 
             products = sortOrder switch
             {
-                "name_desc" => products.OrderByDescending(p => p.Name),
+                "name_desc" => products.OrderByDescending(p => p.FirstName),
                 "Price" => products.OrderBy(p => p.Price),
                 "price_desc" => products.OrderByDescending(p => p.Price),
                 "Date" => products.OrderBy(p => p.CreatedDate),
                 "date_desc" => products.OrderByDescending(p => p.CreatedDate),
-                _ => products.OrderBy(p => p.Name)
+                _ => products.OrderBy(p => p.FirstName)
             };
 
             int pageSize = 10;
@@ -91,7 +92,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("FirstName,LastName,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
         {
                 if (imageFile != null && imageFile.Length > 0)
                 {
@@ -139,7 +140,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,Name,Description,Price,StockQuantity,CategoryId,IsActive")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,FirstName,LastName,Description,Price,StockQuantity,CategoryId,IsActive")] Product product, IFormFile imageFile)
         {
             if (id != product.ProductId)
             {
@@ -163,7 +164,8 @@ namespace DBSD_CW2.Web.Controllers
                         existingProduct.ImageData = memoryStream.ToArray();
                     }
 
-                    existingProduct.Name = product.Name;
+                    existingProduct.FirstName = product.FirstName;
+                    existingProduct.LastName = product.LastName;
                     existingProduct.Description = product.Description;
                     existingProduct.Price = product.Price;
                     existingProduct.StockQuantity = product.StockQuantity;

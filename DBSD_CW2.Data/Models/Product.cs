@@ -9,7 +9,11 @@ namespace DBSD_CW2.Data.Models
 
         [Required]
         [StringLength(100)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        
+        [Required]
+        [StringLength(100)]
+        public string LastName { get; set; }
 
         public string Description { get; set; }
 

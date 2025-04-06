@@ -57,9 +57,10 @@
                         <tr>
                             <th>
                                 <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-decoration-none text-dark">
-                                    Name <i class="fas fa-sort"></i>
+                                    First Name <i class="fas fa-sort"></i>
                                 </a>
                             </th>
+                            <th>Last Name</th>
                             <th>Description</th>
                             <!-- <th>
                                 <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-decoration-none text-dark">
@@ -81,7 +82,8 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.Name</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
                                 <td>@item.Description</td>
                                 
                                 <td>@item.Category?.Name</td>
