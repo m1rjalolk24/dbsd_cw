@@ -3,6 +3,10 @@ using DBSD_CW2.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Set up DataDirectory
+var dataDirectory = Path.Combine(builder.Environment.ContentRootPath, "..", "..", "Database");
+AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
