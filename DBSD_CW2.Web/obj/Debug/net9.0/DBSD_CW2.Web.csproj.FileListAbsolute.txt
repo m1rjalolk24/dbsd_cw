@@ -464,3 +464,4 @@ C:\m\dbsd_cw-master\DBSD_CW2.Web\obj\Debug\net9.0\refint\DBSD_CW2.Web.dll
 C:\m\dbsd_cw-master\DBSD_CW2.Web\obj\Debug\net9.0\DBSD_CW2.Web.pdb
 C:\m\dbsd_cw-master\DBSD_CW2.Web\obj\Debug\net9.0\DBSD_CW2.Web.genruntimeconfig.cache
 C:\m\dbsd_cw-master\DBSD_CW2.Web\obj\Debug\net9.0\ref\DBSD_CW2.Web.dll
+C:\m\dbsd_cw-master\DBSD_CW2.Web\obj\Debug\net9.0\DBSD_CW2.Web.sourcelink.json

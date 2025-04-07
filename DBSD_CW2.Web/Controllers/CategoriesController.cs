@@ -52,15 +52,12 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Categories/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Description")] Category category)
+        public async Task<IActionResult> Create([Bind("Name,Description,PricePerMonth,Duration")] Category category)
         {
-
-                category.CreatedDate = DateTime.UtcNow;
-                _context.Add(category);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-                
-            return View(category);
+            category.CreatedDate = DateTime.UtcNow;
+            _context.Add(category);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Categories/Edit/5
@@ -82,7 +79,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Categories/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryId,Name,Description")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoryId,Name,Description,PricePerMonth,Duration")] Category category)
         {
             if (id != category.CategoryId)
             {
@@ -101,6 +98,8 @@ namespace DBSD_CW2.Web.Controllers
 
                     existingCategory.Name = category.Name;
                     existingCategory.Description = category.Description;
+                    existingCategory.PricePerMonth = category.PricePerMonth;
+                    existingCategory.Duration = category.Duration;
 
                     await _context.SaveChangesAsync();
                 }

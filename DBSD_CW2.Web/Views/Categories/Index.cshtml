@@ -16,6 +16,8 @@
             <tr>
                 <th>@Html.DisplayNameFor(model => model.Name)</th>
                 <th>@Html.DisplayNameFor(model => model.Description)</th>
+                <th>@Html.DisplayNameFor(model => model.PricePerMonth)</th>
+                <th>@Html.DisplayNameFor(model => model.Duration)</th>
                 <th>@Html.DisplayNameFor(model => model.CreatedDate)</th>
                 <th>Members Count</th>
                 <th>Actions</th>
@@ -27,6 +29,8 @@
                 <tr>
                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
                     <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PricePerMonth)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Duration)</td>
                     <td>@Html.DisplayFor(modelItem => item.CreatedDate)</td>
                     <td>@item.Products?.Count</td>
                     <td>

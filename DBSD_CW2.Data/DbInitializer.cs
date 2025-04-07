@@ -16,19 +16,25 @@ namespace DBSD_CW2.Data
                 {
                     Name = "Electronics",
                     Description = "Electronic devices and accessories",
-                    CreatedDate = DateTime.UtcNow
+                    CreatedDate = DateTime.UtcNow,
+                    PricePerMonth = 29.99m,
+                    Duration = 12
                 },
                 new Category
                 {
                     Name = "Books",
                     Description = "Books and publications",
-                    CreatedDate = DateTime.UtcNow
+                    CreatedDate = DateTime.UtcNow,
+                    PricePerMonth = 19.99m,
+                    Duration = 6
                 },
                 new Category
                 {
                     Name = "Clothing",
                     Description = "Apparel and fashion items",
-                    CreatedDate = DateTime.UtcNow
+                    CreatedDate = DateTime.UtcNow,
+                    PricePerMonth = 39.99m,
+                    Duration = 24
                 }
             };
 

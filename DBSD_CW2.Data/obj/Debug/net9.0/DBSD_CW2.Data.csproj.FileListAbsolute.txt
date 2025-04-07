@@ -26,3 +26,4 @@ C:\m\dbsd_cw-master\DBSD_CW2.Data\obj\Debug\net9.0\refint\DBSD_CW2.Data.dll
 C:\m\dbsd_cw-master\DBSD_CW2.Data\obj\Debug\net9.0\DBSD_CW2.Data.pdb
 C:\m\dbsd_cw-master\DBSD_CW2.Data\obj\Debug\net9.0\DBSD_CW2.Data.genruntimeconfig.cache
 C:\m\dbsd_cw-master\DBSD_CW2.Data\obj\Debug\net9.0\ref\DBSD_CW2.Data.dll
+C:\m\dbsd_cw-master\DBSD_CW2.Data\obj\Debug\net9.0\DBSD_CW2.Data.sourcelink.json
