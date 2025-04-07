@@ -29,12 +29,6 @@ namespace DBSD_CW2.Data.Models
 
         public string Description { get; set; }
 
-        [Required]
-        public decimal Price { get; set; }
-
-        [Required]
-        public int StockQuantity { get; set; }
-
         public byte[] ImageData { get; set; }
 
         [Required]

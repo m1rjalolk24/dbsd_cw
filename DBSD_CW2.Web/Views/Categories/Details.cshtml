@@ -44,8 +44,6 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Stock</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -58,8 +56,6 @@
                                                 @product.FirstName @product.LastName
                                             </a>
                                         </td>
-                                        <td>@Html.DisplayFor(modelItem => product.Price)</td>
-                                        <td>@Html.DisplayFor(modelItem => product.StockQuantity)</td>
                                         <td>@(product.IsActive ? "Active" : "Inactive")</td>
                                     </tr>
                                 }

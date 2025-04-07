@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBSD_CW2.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03e0631ef1691f81dab5f6a49c606b4806f4ce7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce991b20e2893b47458bac0688617b2cb440a86")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBSD_CW2.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBSD_CW2.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

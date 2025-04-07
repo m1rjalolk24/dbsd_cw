@@ -22,7 +22,6 @@ namespace DBSD_CW2.Web.Controllers
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["PriceSortParm"] = sortOrder == "Price" ? "price_desc" : "Price";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
 
             if (searchString != null)
@@ -53,8 +52,6 @@ namespace DBSD_CW2.Web.Controllers
             products = sortOrder switch
             {
                 "name_desc" => products.OrderByDescending(p => p.FirstName),
-                "Price" => products.OrderBy(p => p.Price),
-                "price_desc" => products.OrderByDescending(p => p.Price),
                 "Date" => products.OrderBy(p => p.CreatedDate),
                 "date_desc" => products.OrderByDescending(p => p.CreatedDate),
                 _ => products.OrderBy(p => p.FirstName)
@@ -94,7 +91,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FirstName,LastName,Phone,Email,DateOfBirth,Description,Price,StockQuantity,IsActive,CategoryId")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("FirstName,LastName,Phone,Email,DateOfBirth,Description,IsActive,CategoryId")] Product product, IFormFile imageFile)
         {
                 if (imageFile != null && imageFile.Length > 0)
                 {
@@ -142,7 +139,7 @@ namespace DBSD_CW2.Web.Controllers
         // POST: Products/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,FirstName,LastName,Phone,Email,DateOfBirth,Description,Price,StockQuantity,CategoryId,IsActive")] Product product, IFormFile imageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,FirstName,LastName,Phone,Email,DateOfBirth,Description,CategoryId,IsActive")] Product product, IFormFile imageFile)
         {
             if (id != product.ProductId)
             {
@@ -172,8 +169,6 @@ namespace DBSD_CW2.Web.Controllers
                     existingProduct.Email = product.Email;
                     existingProduct.DateOfBirth = product.DateOfBirth;
                     existingProduct.Description = product.Description;
-                    existingProduct.Price = product.Price;
-                    existingProduct.StockQuantity = product.StockQuantity;
                     existingProduct.CategoryId = product.CategoryId;
                     existingProduct.IsActive = product.IsActive;
                     existingProduct.LastModifiedDate = DateTime.UtcNow;

@@ -22,10 +22,6 @@ namespace DBSD_CW2.Data
                 .WithMany(c => c.Products)
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.SetNull);
-
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Price)
-                .HasPrecision(10, 2);
         }
     }
 } 
