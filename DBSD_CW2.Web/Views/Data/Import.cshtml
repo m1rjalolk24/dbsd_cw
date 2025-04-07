@@ -1,0 +1,122 @@
+@{
+    ViewData["Title"] = "Import Data";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">Import Data</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-upload me-1"></i>
+            Import Data from XML or JSON
+        </div>
+        <div class="card-body">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            Import from XML
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="ImportXml" method="post" enctype="multipart/form-data">
+                                <div class="form-group mb-3">
+                                    <label for="xmlFile">Select XML File:</label>
+                                    <input type="file" id="xmlFile" name="xmlFile" class="form-control" accept=".xml" required />
+                                    <small class="form-text text-muted">
+                                        The XML file should match the expected format. See the sample structure below.
+                                    </small>
+                                </div>
+                                <button type="submit" class="btn btn-success">Import XML</button>
+                            </form>
+
+                            <hr />
+
+                            <h5>Sample XML Format:</h5>
+                            <pre class="bg-light p-3 rounded">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Products&gt;
+  &lt;Product FirstName="John" LastName="Smith"&gt;
+    &lt;Email&gt;john.smith@example.com&lt;/Email&gt;
+    &lt;Phone&gt;123-456-7890&lt;/Phone&gt;
+    &lt;Description&gt;Client description&lt;/Description&gt;
+    &lt;DateOfBirth&gt;1985-05-15T00:00:00&lt;/DateOfBirth&gt;
+    &lt;Category Id="1"&gt;
+      &lt;Name&gt;VIP Clients&lt;/Name&gt;
+      &lt;Description&gt;VIP client description&lt;/Description&gt;
+    &lt;/Category&gt;
+  &lt;/Product&gt;
+&lt;/Products&gt;
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            Import from JSON
+                        </div>
+                        <div class="card-body">
+                            <form asp-action="ImportJson" method="post" enctype="multipart/form-data">
+                                <div class="form-group mb-3">
+                                    <label for="jsonFile">Select JSON File:</label>
+                                    <input type="file" id="jsonFile" name="jsonFile" class="form-control" accept=".json" required />
+                                    <small class="form-text text-muted">
+                                        The JSON file should match the expected format. See the sample structure below.
+                                    </small>
+                                </div>
+                                <button type="submit" class="btn btn-info">Import JSON</button>
+                            </form>
+
+                            <hr />
+
+                            <h5>Sample JSON Format:</h5>
+                            <pre class="bg-light p-3 rounded">
+{
+  "Products": [
+    {
+      "FirstName": "Jane",
+      "LastName": "Doe",
+      "Email": "jane.doe@example.com",
+      "Phone": "987-654-3210",
+      "Description": "Client description",
+      "DateOfBirth": "1990-10-20T00:00:00",
+      "Category": {
+        "CategoryId": 2,
+        "Name": "New Clients",
+        "Description": "New client description"
+      }
+    }
+  ]
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div> 

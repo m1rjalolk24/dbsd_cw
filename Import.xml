@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <Product FirstName="John" LastName="Smith">
+    <Email>john.smith@example.com</Email>
+    <Phone>123-456-7890</Phone>
+    <Description>A loyal client with a long history of purchases.</Description>
+    <DateOfBirth>1985-05-15T00:00:00</DateOfBirth>
+    <IsActive>true</IsActive>
+    <Category Id="1">
+      <Name>VIP Clients</Name>
+      <Description>Our most valuable clients who receive premium service and benefits.</Description>
+    </Category>
+    <AuditLog User="System" Date="2025-04-01T09:30:00" Action="Created" />
+  </Product>
+  <Product FirstName="Jane" LastName="Doe">
+    <Email>jane.doe@example.com</Email>
+    <Phone>987-654-3210</Phone>
+    <Description>New client with high potential for future business.</Description>
+    <DateOfBirth>1990-10-20T00:00:00</DateOfBirth>
+    <IsActive>true</IsActive>
+    <Category Id="2">
+      <Name>New Clients</Name>
+      <Description>Recently acquired clients who need special attention and onboarding.</Description>
+    </Category>
+    <AuditLog User="System" Date="2025-04-02T14:15:00" Action="Created" />
+  </Product>
+  <Product FirstName="Michael" LastName="Johnson">
+    <Email>michael.johnson@example.com</Email>
+    <Phone>555-123-4567</Phone>
+    <Description>Corporate client representing Johnson &amp; Associates.</Description>
+    <DateOfBirth>1978-03-25T00:00:00</DateOfBirth>
+    <IsActive>true</IsActive>
+    <Category Id="3">
+      <Name>Corporate Clients</Name>
+      <Description>Business clients who represent larger organizations or enterprises.</Description>
+    </Category>
+    <AuditLog User="System" Date="2025-04-03T11:45:00" Action="Created" />
+  </Product>
+</Products>

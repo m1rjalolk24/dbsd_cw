@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DBSD_CW2.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc816d5e10b79cedbaab540cbd5b40b97d7e119c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2240333bafd510816ee2d14d80224eddfdb86bb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("DBSD_CW2.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DBSD_CW2.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

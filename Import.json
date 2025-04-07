@@ -1,0 +1,61 @@
+{
+  "Products": [
+    {
+      "FirstName": "Robert",
+      "LastName": "Williams",
+      "Email": "robert.williams@example.com",
+      "Phone": "333-444-5555",
+      "Description": "Long-term client with multiple service contracts.",
+      "DateOfBirth": "1982-08-12T00:00:00",
+      "IsActive": true,
+      "Category": {
+        "CategoryId": 1,
+        "Name": "VIP Clients",
+        "Description": "Our most valuable clients who receive premium service and benefits."
+      },
+      "AuditLog": {
+        "User": "System",
+        "Date": "2025-04-01T10:30:00",
+        "Action": "Created"
+      }
+    },
+    {
+      "FirstName": "Emily",
+      "LastName": "Brown",
+      "Email": "emily.brown@example.com",
+      "Phone": "222-333-4444",
+      "Description": "New client referred by Michael Johnson.",
+      "DateOfBirth": "1991-07-19T00:00:00",
+      "IsActive": true,
+      "Category": {
+        "CategoryId": 2,
+        "Name": "New Clients",
+        "Description": "Recently acquired clients who need special attention and onboarding."
+      },
+      "AuditLog": {
+        "User": "System",
+        "Date": "2025-04-02T15:45:00",
+        "Action": "Created"
+      }
+    },
+    {
+      "FirstName": "Daniel",
+      "LastName": "Martinez",
+      "Email": "daniel.martinez@example.com",
+      "Phone": "777-888-9999",
+      "Description": "Corporate representative for Martinez & Sons Ltd.",
+      "DateOfBirth": "1975-11-05T00:00:00",
+      "IsActive": true,
+      "Category": {
+        "CategoryId": 3,
+        "Name": "Corporate Clients",
+        "Description": "Business clients who represent larger organizations or enterprises."
+      },
+      "AuditLog": {
+        "User": "System",
+        "Date": "2025-04-03T09:15:00",
+        "Action": "Created"
+      }
+    }
+  ]
+}
