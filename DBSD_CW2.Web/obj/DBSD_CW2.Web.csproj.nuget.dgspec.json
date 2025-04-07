@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj": {}
+    "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj": {}
   },
   "projects": {
-    "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj": {
+    "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
+        "projectUniqueName": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
         "projectName": "DBSD_CW2.Data",
-        "projectPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
+        "projectPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\obj\\",
+        "outputPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj": {
+    "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
+        "projectUniqueName": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
         "projectName": "DBSD_CW2.Web",
-        "projectPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
+        "projectPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\obj\\",
+        "outputPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +115,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj": {
-                "projectPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj"
+              "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj": {
+                "projectPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj"
               }
             }
           }

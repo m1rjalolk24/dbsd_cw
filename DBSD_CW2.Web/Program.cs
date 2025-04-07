@@ -10,9 +10,18 @@ AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectory);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Get connection string and replace %CONTENTROOTPATH% placeholder
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (connectionString.Contains("%CONTENTROOTPATH%"))
+{
+    // Go up one directory from ContentRootPath to reach the project root
+    string projectRootPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, ".."));
+    connectionString = connectionString.Replace("%CONTENTROOTPATH%", projectRootPath);
+}
+
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    options.UseSqlServer(connectionString,
         b => b.MigrationsAssembly("DBSD_CW2.Web")));
 
 var app = builder.Build();

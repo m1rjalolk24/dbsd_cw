@@ -4717,11 +4717,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
+      "projectUniqueName": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
       "projectName": "DBSD_CW2.Data",
-      "projectPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
+      "projectPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\DBSD_CW2.Data.csproj",
       "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-      "outputPath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Data\\obj\\",
+      "outputPath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

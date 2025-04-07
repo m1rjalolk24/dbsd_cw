@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tgz4KzY46xk=",
+  "dgSpecHash": "EmOnCkbq3FY=",
   "success": true,
-  "projectFilePath": "C:\\m\\dbsd_cw-master\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
+  "projectFilePath": "C:\\m\\DBSD.CW2.16532.16117.16119\\DBSD_CW2.Web\\DBSD_CW2.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
