@@ -93,28 +93,27 @@ namespace DBSD_CW2.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FirstName,LastName,Phone,Email,DateOfBirth,Description,IsActive,CategoryId")] Product product, IFormFile imageFile)
         {
-                if (imageFile != null && imageFile.Length > 0)
+            if (ModelState.IsValid)
+            {
+                if (string.IsNullOrWhiteSpace(product.Description))
                 {
-                    using (var stream = new MemoryStream())
-                    {
-                        await imageFile.CopyToAsync(stream);
-                        product.ImageData = stream.ToArray();
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("ImageData", "Product image is required.");
-                    ViewData["Categories"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
-                    return View(product);
+                    product.Description = "No description provided";
                 }
 
-                product.CreatedDate = DateTime.UtcNow;
-                product.LastModifiedDate = DateTime.UtcNow;
+                if (imageFile != null && imageFile.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await imageFile.CopyToAsync(memoryStream);
+                        product.ImageData = memoryStream.ToArray();
+                    }
+                }
+
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            
-            ViewData["Categories"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
+            }
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name", product.CategoryId);
             return View(product);
         }
 

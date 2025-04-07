@@ -27,7 +27,8 @@ namespace DBSD_CW2.Data.Models
         [Display(Name = "Date of Birth")]
         public DateTime? DateOfBirth { get; set; }
 
-        public string Description { get; set; }
+        [Required]
+        public string Description { get; set; } = "No description provided";
 
         public byte[] ImageData { get; set; }
 
